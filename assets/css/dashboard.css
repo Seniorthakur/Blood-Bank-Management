@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box    ;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    background: #dd0000;
+    transition: 0.5s;
+    overflow:hidden;
+    transition: 0.5s;
+}
+.navigation.active
+{
+width: 60px;
+transition: 0.5s;
+}
+.navigation ul
+{
+position:absolute;
+top: 0;
+left: 0;
+width: 100%;
+}
+.navigation ul li
+{
+ position: relative;
+ width: 100%;
+ list-style: none;
+}
+.navigation ul li:hover{
+    background: #ffffff;
+
+}
+.navigation ul li:nth-child(1)
+{
+    margin-bottom: 20px;
+
+}
+.navigation ul li:hover
+{
+    background: #ffa702;
+}
+.navigation ul li:nth-child(1):hover
+{
+background: transparent;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color:#ffffff;
+}
+
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.navigation ul li a .icon .fa
+{
+   color: #ffffff;
+   font-size: 24px;
+}
+.navigation ul li a .title 
+{
+    position: relative;
+    display: block;
+    padding: 0 5px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.footer{
+
+position: absolute;
+bottom: 0px;
+width: 100%;
+height: 10%;
+color: #ffffff;
+transition: 0.5s;
+text-align: center;
+ font-family: Roboto;
+ font-size: 15px;
+ padding: 10px;
+}
+.footer hr
+{
+    margin:2px;
+}
+.footer p
+{
+    margin-bottom: 3px;
+}
+
+.main{
+    position: absolute;
+    width: calc( 100% - 400px);
+    left: 400px;
+    min-height: 100vh;
+    background: #ececec;
+    transition: 0.5s;
+}
+.main.active
+{
+    width: calc( 100% - 60px);
+    left: 60px;
+    transition: 0.5s;
+}
+.main .topbar
+{
+    width: 100%;
+    background: #ffffff;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.toggle::before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #dd0000;
+}
+.search
+{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.search label
+{
+    position: relative;
+    width: 100%;
+}
+.search label input
+{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline: none;
+    border: 2px solid #dd0000;
+}
+
+.search label .fa
+{
+    position: absolute;
+    left: 15px;
+    top:15px;
+    border: none;
+    background: none;
+}
+
+.user
+{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow:hidden;
+}
+
+.user img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardtitle
+{
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    background: #ffa702;
+
+}
+.cardbox
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.cardbox .card
+{
+    position: relative;
+    background: #dd0000;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.cardbox .card .number
+{
+    position: relative;
+    font-size: 2em;
+    font-weight: 600;
+    color: #ffbb3c;
+}
+.cardbox .card .cardName
+{
+    color: #ffffff;
+}
+.cardbox .card .iconbox
+{
+    position: relative;
+    width: 100%;
+    width: 100%;
+}
+.cardbox .card .iconbox img
+{
+    text-align: right;
+    margin-right: 2px;
+    right: 0;
+    position: relative;
+    width: 60px;
+    height: 80px;
+
+}
+table, td, th {
+    border: 3px solid#ffa702;
+    text-align: center;
+  }
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+tr:nth-child(odd) 
+  {
+    background-color: #fff;
+}
+.donorlist b
+{
+padding: 5px;
+}
+.donorlist .center
+{
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 200;
+    color: #000000;
+    
+}
+.donorlist .center strong
+{
+    color: #dd0000;
+}
+.tabletitle td
+{
+background: #dd0000;
+padding: 5px;
+}
+.searchtitle td
+{
+background: #0f0053;
+padding: 5px;
+}
+.patientlist .center
+{
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 200;
+    color: #000000;
+}
+.patientlist .center strong
+{
+    color: #dd0000;
+}
+.searchlist b
+{
+padding: 5px;
+color: #ffffff;
+}
+.searchlist .center
+{
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 200;
+    color: #000000;
+    
+}
+.searchlist .center strong
+{
+    color: #dd0000;
+}
+  
+
